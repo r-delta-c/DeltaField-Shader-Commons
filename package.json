@@ -1,0 +1,17 @@
+{
+    "name": "com.deltafield.shader_common",
+    "displayName": "DeltaField Shader Common",
+    "version": "0.0.0",
+    "unity": "2022.3",
+    "description": "",
+    "keywords": ["shader", "include", "hlsl"],
+    "author": {
+        "name": "DeltaField"
+    },
+    "license": "MIT",
+    "vpmDependencies":{
+
+    },
+    "url":"",
+    "repo": ""
+}
