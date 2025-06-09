@@ -3,7 +3,7 @@
     "displayName": "DeltaField-Shader-Commons",
     "version": "0.0.0",
     "unity": "2022.3",
-    "description": "",
+    "description": "Features: Stereo Merge and Billboard",
     "keywords": ["shader", "include", "hlsl"],
     "author": {
         "name": "DeltaField"
