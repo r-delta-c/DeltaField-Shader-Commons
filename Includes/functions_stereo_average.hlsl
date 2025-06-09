@@ -1,12 +1,3 @@
-float4x4 BuildMatrix(float3x3 m){
-    return float4x4(
-        m[0],0.0,
-        m[1],0.0,
-        m[2],0.0,
-        0.0,0.0,0.0,1.0
-    );
-}
-
 float4x4 BuildObjectMatrix(float3x3 m, float3 offset){
     return float4x4(
         m[0],offset.x,
@@ -29,12 +20,13 @@ float3x3 RMatAverage(float3x3 ma, float3x3 mb){
     float3 x = normalize(cross(y,z));
     z = normalize(z);
     y = cross(z,x);
+    x = -x;
 
     #if SHADER_TARGET_GLSL
         return float3x3(
             x[0],y[0],z[0],
             x[1],y[1],z[1],
-            x[2],y[2],z[2],
+            x[2],y[2],z[2]
             );
     #else
         return float3x3(x,y,z);
