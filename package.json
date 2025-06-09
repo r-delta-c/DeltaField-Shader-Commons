@@ -1,6 +1,6 @@
 {
-    "name": "com.deltafield.shader_common",
-    "displayName": "DeltaField Shader Common",
+    "name": "com.deltafield.shader_commons",
+    "displayName": "DeltaField-Shader-Commons",
     "version": "0.0.0",
     "unity": "2022.3",
     "description": "",
@@ -11,7 +11,5 @@
     "license": "MIT",
     "vpmDependencies":{
 
-    },
-    "url":"",
-    "repo": ""
+    }
 }
