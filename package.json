@@ -1,7 +1,7 @@
 {
     "name": "com.deltafield.shader_commons",
     "displayName": "DeltaField-Shader-Commons",
-    "version": "dev-1.0.0",
+    "version": "0.1.0-exp.1",
     "unity": "2022.3",
     "description": "Features: Stereo Merge and Billboard",
     "keywords": ["shader", "include", "hlsl"],
@@ -9,6 +9,9 @@
         "name": "DeltaField"
     },
     "license": "MIT",
+    "dependencies": {
+
+    },
     "vpmDependencies":{
 
     }
