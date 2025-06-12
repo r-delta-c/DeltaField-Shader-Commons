@@ -23,7 +23,7 @@ VPM(を通したunitypackageファイル)からインポートすることもで
 ## Installation instructions | インストール方法
 
 ## How to Use | 使い方
-[こちらのドキュメンテーション](https://github.com/r-delta-c/DeltaField-Shader-Commons/blob/main/Documentation/shader_commons.md "Documentation/shader_commons.md")を参照してください。<br>
+[こちらのドキュメンテーション](https://github.com/r-delta-c/DeltaField-Shader-Commons/blob/main/Documentation~/shader_commons.md "Documentation~/shader_commons.md")を参照してください。<br>
 
 ## License | ライセンス
 このシェーダーはMIT Licenseによって提供されます。
