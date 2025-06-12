@@ -3,6 +3,10 @@
 
 ## Includes/features_stereo_merge.hlsl
 Stereo Merge用のshader_featureが記述されています。<br>
+ローカルキーワードとして指定したい場合は下記などの内容のように`.shader`ファイルに**直接**記述してください。
+```
+#pragma shader_feature_local _STEREOMERGEMODE_NONE _STEREOMERGEMODE_POSITION _STEREOMERGEMODE_ROTATION _STEREOMERGEMODE_POSITION_ROTATION
+```
 |keyword|  |
 |:------|:-|
 _STEREOMERGEMODE_NONE | カメラの座標や向きを平均化をしない用途として使用されています。
