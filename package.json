@@ -4,7 +4,7 @@
     "version": "0.1.0-exp.1",
     "unity": "2022.3",
     "description": "Features: Stereo Merge and Billboard",
-    "keywords": ["shader", "include", "hlsl"],
+    "keywords": ["shader", "include", "hlsl", "vr", "xr"],
     "author": {
         "name": "DeltaField"
     },
