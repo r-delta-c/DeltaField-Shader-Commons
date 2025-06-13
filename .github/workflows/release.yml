@@ -85,3 +85,23 @@ jobs:
             ${{ env.unityPackage }}
             ${{ env.packagePath }}/package.json
           tag_name: ${{ env.version }}
+
+      - name: Get Year
+        env: 
+          TZ: "Asia/Tokyo"
+        run: echo "year=$(date +'%Y')" >> $GITHUB_ENV
+
+      - name: Clone & Replace
+        run: |
+          cp raw/README.md README.md
+          sed -i -e "s/\$name/${{ vars.PACKAGE_NAME }}/g" README.md
+          sed -i -e "s/\$version/${{env.version}}/g" README.md
+          sed -i -e "s/\$version/${{env.year}}/g" README.md
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "Update README with version $VERSION"
+          git push

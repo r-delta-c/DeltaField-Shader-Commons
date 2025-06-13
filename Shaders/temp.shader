@@ -77,13 +77,12 @@ Shader "DeltaField/shaders/temp"{
             // float4 _DELTAFIELD_GB_NAME_777_ST;
 
             float _Forced_Z_Scale_Zero;
-            fixed alpha;
 
             sampler2D _MainTex;
             half4 _Color;
 
-            #include "Packages/com.deltafield.shader_commons/Includes/functions_stereo_merge.hlsl"
             #include "Packages/com.deltafield.shader_commons/Includes/macro_stereo_merge.hlsl"
+            #include "Packages/com.deltafield.shader_commons/Includes/functions_stereo_merge.hlsl"
 
             v2f vert (appdata v){
                 v2f o;
