@@ -1,5 +1,5 @@
 # $name
-Copyright (c) $year, DeltaField
+Copyright (c) 2025, DeltaField
 
 
 
