@@ -57,7 +57,8 @@ jobs:
         run: |
           mkdir -p Packages/${{steps.id.outputs.value}}
           echo *
-          cp -r !Packages Packages/${{steps.id.outputs.value}}
+          shopt -s extglob
+          cp -r !(Packages) Packages/${{steps.id.outputs.value}}
           echo "packagePath=Packages" >> $GITHUB_ENV
 
       # Configure the Environment Variables needed for releasing the Package
