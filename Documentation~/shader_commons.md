@@ -1,46 +1,61 @@
 # Package contents | パッケージ内容
 以下のファイルが含まれています。<br>
 
-## Includes/features_stereo_merge.hlsl
+## [Includes/features_stereo_merge.hlsl](https://github.com/r-delta-c/DeltaField-Shader-Commons/blob/main/Includes/features_stereo_merge.hlsl)
 Stereo Merge用のshader_featureが記述されています。<br>
 ローカルキーワードとして指定したい場合は下記などの内容のように`.shader`ファイルに**直接**記述してください。
 ```
 #pragma shader_feature_local _STEREOMERGEMODE_NONE _STEREOMERGEMODE_POSITION _STEREOMERGEMODE_ROTATION _STEREOMERGEMODE_POSITION_ROTATION
 ```
-|keyword|  |
+|keyword|Description|
 |:------|:-|
 _STEREOMERGEMODE_NONE | カメラの座標や向きを平均化をしない用途として使用されています。
 _STEREOMERGEMODE_POSITION | カメラの座標を平均化する用途として使用されています。
 _STEREOMERGEMODE_ROTATION | カメラの向きを平均化する用途として使用されています。
 _STEREOMERGEMODE_POSITION_ROTATION | カメラの座標と向きを平均化する用途として使用されています。
 
-## Includes/functions_stereo_merge.hlsl
+## [Includes/functions_math.hlsl](https://github.com/r-delta-c/DeltaField-Shader-Commons/blob/main/Includes/functions_math.hlsl)
+* Added v0.2.0-exp.1
+
+modを始めとした様々な関数が含まれています。
+
+## [Includes/functions_random.hlsl](https://github.com/r-delta-c/DeltaField-Shader-Commons/blob/main/Includes/functions_random.hlsl)
+* Added v0.2.0-exp.1<br>
+
+乱数に関する関数が含まれています。
+
+## [Includes/functions_random3d.hlsl](https://github.com/r-delta-c/DeltaField-Shader-Commons/blob/main/Includes/functions_random3d.hlsl)
+* Added v0.2.0-exp.1<br>
+
+三次元の情報を基に乱数を生成する関数が含まれています。
+
+## [Includes/functions_stereo_merge.hlsl](https://github.com/r-delta-c/DeltaField-Shader-Commons/blob/main/Includes/functions_stereo_merge.hlsl)
 Stereo Merge用の関数が記述されています。
 
-## Includes/macro_stereo_merge.hlsl
+## [Includes/macro_stereo_merge.hlsl](https://github.com/r-delta-c/DeltaField-Shader-Commons/blob/main/Includes/macro_stereo_merge.hlsl)
 Stereo Merge用のマクロが記述されています。
 |Macro|  |
 |:----|:-|
 DEFINE_STEREO_MERGE_MATRIX_V | キーワードに応じたビュー行列が入ります。
 CAMERA_DISTANCE_MACRO | 頂点とカメラまでの距離が入ります。ステレオレンダリングに対応しています。
 
-## Includes/vertex_billboard.hlsl
+## [Includes/vertex_billboard.hlsl](https://github.com/r-delta-c/DeltaField-Shader-Commons/blob/main/Includes/vertex_bollboard.hlsl)
 ビルボード機能を有効にした時の頂点変換の処理が記述されています。<br>
 これをIncludeする前に、`macro_stereo_merge.hlsl`を**Include**してください。<br>
 ビルボード機能用に`_Forced_Z_Scale_Zero`という変数を使用しています。<br>
 モデルの持つ奥行きを0にして平たくします。<br>
 **必ず変数に加えてください。**
 
-## Includes/vertex_non_billboard.hlsl
+## [Includes/vertex_non_billboard.hlsl](https://github.com/r-delta-c/DeltaField-Shader-Commons/blob/main/Includes/vertex_non_billboard.hlsl)
 ビルボード機能を無効にした時の頂点変換の処理が記述されています。<br>
 これをIncludeする前に、`macro_stereo_merge.hlsl`を**Include**してください。
 
 
 
-## Shaders/temp.shader
+## [Shaders/temp.shader](https://github.com/r-delta-c/DeltaField-Shader-Commons/blob/main/Shaders/temp.shader)
 テンプレートを目的にした、Stereo Merge、ビルボード機能を備えたUnlitなシェーダーです。
 
-|Property|  |
+|Property|Description|
 |:-------|:-|
 |Culling Mode | カリングの指定をします。|
 |Z Write | デプスバッファの書き込みの有効性を指定します。|
