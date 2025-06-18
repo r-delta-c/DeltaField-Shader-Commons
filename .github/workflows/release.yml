@@ -75,16 +75,6 @@ jobs:
         uses: rickstaa/action-create-tag@88dbf7ff6fe2405f8e8f6c6fdfd78829bc631f83
         with:
           tag: "${{ env.version }}"
-      
-      # Publish the Release to GitHub
-      - name: Make Release
-        uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
-        with:
-          files: |
-            ${{ env.zipFile }}
-            ${{ env.unityPackage }}
-            ${{ env.packagePath }}/package.json
-          tag_name: ${{ env.version }}
 
       - name: Clone & Replace
         run: |
@@ -99,3 +89,13 @@ jobs:
           git add README.md
           git commit -m "Update README.md with version $version"
           git push
+
+      # Publish the Release to GitHub
+      - name: Make Release
+        uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
+        with:
+          files: |
+            ${{ env.zipFile }}
+            ${{ env.unityPackage }}
+            ${{ env.packagePath }}/package.json
+          tag_name: ${{ env.version }}
