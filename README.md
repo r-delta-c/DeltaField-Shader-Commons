@@ -8,7 +8,7 @@ Name: DeltaField-Shader-Commons<br>
 Version: 0.2.0-exp.1<br>
 
 汎用的なIncludeやシェーダーをまとめたUnity Packageです。<br>
-VPM(を通したunitypackageファイル)からインポートすることもできます。<br>
+VPM(を通したunitypackageファイル)からインポートすることもできます。
 
 以下の機能を特徴としています。
 * ステレオレンダリング時に参照するカメラの位置や向きの平均化(Stereo Merge)。
