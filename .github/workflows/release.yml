@@ -55,8 +55,8 @@ jobs:
 
       - name: Recreate folder structure
         run: |
-          mkdir -p Packages/steps.id.outputs.value
-          cp -r * Packages/steps.id.outputs.value
+          mkdir -p Packages/${{steps.id.outputs.value}}
+          cp -r !(Packages) Packages/${{steps.id.outputs.value}}
 
       # Configure the Environment Variables needed for releasing the Package
       - name: Set Environment Variables
