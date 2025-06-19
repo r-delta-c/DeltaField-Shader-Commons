@@ -1,0 +1,8 @@
+name: Build Release
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  config:
+    uses: DeltaField/BuildReleaseCustomActions/.github/workflows/config@v1
