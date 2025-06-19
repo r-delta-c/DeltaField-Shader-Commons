@@ -5,4 +5,4 @@ on:
 
 jobs:
   release:
-    uses: DeltaField/BuildReleaseCustomActions/.github/workflows/release@v1
+    uses: DeltaField/BuildReleaseCustomActions/.github/workflows/release.yml@v1
