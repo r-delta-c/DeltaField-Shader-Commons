@@ -4,5 +4,5 @@ on:
   workflow_dispatch:
 
 jobs:
-  config:
-    uses: DeltaField/BuildReleaseCustomActions/.github/workflows/config@v1
+  release:
+    uses: DeltaField/BuildReleaseCustomActions/.github/workflows/release@v1
