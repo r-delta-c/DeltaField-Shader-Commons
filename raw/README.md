@@ -21,6 +21,21 @@ VPM(を通したunitypackageファイル)からインポートすることもで
 * Unity XR Single-pass Instanced
 
 ## Installation instructions | インストール方法
+### VPM - ***推奨***
+[Package Listing WEB](https://r-delta-c.github.io/vpm_repository/)へ移動し、**Add to VCC**というボタンを押して、VRChat Creator Companionからパッケージをインポートしてください。
+
+### Package Manager - ***推奨***
+Unityのタブメニューから、**Window -> Package Manager**を押してPackage Managerを開きます。<br>
+Package Managerの左上にある**+**ボタンを押して、**Add package from git URL...**を押します。<br>
+開かれた入力ダイアログに以下のリンクを張り付けて、**Add**を押して加えてください。<br>
+```
+https://github.com/r-delta-c/DeltaField-Shader-Commons.git
+```
+**[Requirements | 環境要件]に前提パッケージが記載されていた場合は、先にそちらをインポートしてください。**
+
+### .unitypackage
+[リリースデータ](https://github.com/r-delta-c/DeltaField-Shader-Commons/releases)から任意のバージョンを探して、Assets内の末尾が **.unitypackage**になっているデータをDLしてください。<br>
+DLした.unitypackageは、起動したUnity上へ**ドラッグ&ドロップ**することでインポートできます。
 
 
 
