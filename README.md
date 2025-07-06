@@ -5,7 +5,7 @@ Copyright (c) 2025, DeltaField
 
 ## Overview | 概要
 Name: DeltaField-Shader-Commons<br>
-Version: 0.2.0-exp.1<br>
+Version: 1.0.0<br>
 
 汎用的なIncludeやシェーダーをまとめたUnity Packageです。<br>
 VPM(を通したunitypackageファイル)からインポートすることもできます。
