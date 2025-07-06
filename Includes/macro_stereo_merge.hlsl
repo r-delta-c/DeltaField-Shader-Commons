@@ -12,8 +12,8 @@
         #define DEFINE_STEREO_MERGE_MATRIX_V unity_MatrixV
     #endif
 
-    #define CAMERA_DISTANCE_MACRO length((unity_StereoWorldSpaceCameraPos[0]+unity_StereoWorldSpaceCameraPos[1])*0.5-o.vertex)
+    #define CAMERA_DISTANCE_MACRO length((unity_StereoWorldSpaceCameraPos[0]+unity_StereoWorldSpaceCameraPos[1])*0.5-o.vertex.xyz)
 #else
     #define DEFINE_STEREO_MERGE_MATRIX_V unity_MatrixV
-    #define CAMERA_DISTANCE_MACRO length(_WorldSpaceCameraPos-o.vertex)
+    #define CAMERA_DISTANCE_MACRO length(_WorldSpaceCameraPos-o.vertex.xyz)
 #endif
