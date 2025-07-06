@@ -3,7 +3,7 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.0.0] 2025/07/nn
+## [1.0.0] 2025/07/06
 ### Changed
 - ビルボード描写を切り替える**Particle Billboard Mode(Feature)**`PropertyName: _DisableCustomBillboard`の名称を変更。<br>トグルの反転を想定挙動として取り扱います。
     - PropertyName: `_DisableCustomBillboard` → `_BillboardMode`
