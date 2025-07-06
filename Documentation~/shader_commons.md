@@ -60,7 +60,7 @@ CAMERA_DISTANCE_MACRO | 頂点とカメラまでの距離が入ります。ス�
 |Culling Mode | カリングの指定をします。|
 |Z Write | デプスバッファの書き込みの有効性を指定します。|
 |Forced Z Scale Zero | 有効にするとモデルのZ方向(奥行き)のスケールを強制的に0にします。Particle Billboard Modeが無効な時のみ有効です。|
-|Particle Billboard Mode(Feature) | 有効にするとシェーダー側のビルボードの処理を無効にします。単にビルボード描写をしない他、パーティクルシステム側でビルボードとして使用する場合を想定しています。|
+|Billboard Mode(Feature) | 有効にするとシェーダー側でビルボード描写にします。パーティクルシステム側でビルボードとして使用する場合はOffにしてください。|
 |Normal Preview Mode(Feature) | 有効にするとモデルのノーマルに基づいて、モデルが色付けされるようになります。後述するMain Tex、Colorは無効になります。|
 |Preview Mode(Feature) | フラグメントシェーダー内で描写を分岐するために用意されています。デフォルトでは何の効果もありません。|
 |Main Tex | 任意のテクスチャをUVに基づいて描写します。|

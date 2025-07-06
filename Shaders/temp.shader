@@ -6,8 +6,8 @@ Shader "DeltaField/shaders/temp"{
         _ZWrite("Z Write",Int)=1
         [Space(16)]
         [MaterialToggle]_Forced_Z_Scale_Zero("Forced Z Scale Zero",Float)=1.0
-        [Toggle(_DISABLE_CUSTOM_BILLBOARD)]
-        _DisableCustomBillBoard("Particle Billboard Mode(Feature)",Int)=0
+        [Toggle(_BILLBOARD_MODE)]
+        _BillboardMode("Billboard Mode(Feature)",Int)=0
         [Toggle(_NORMAL_PREVIEW)]
         _NormalPreview("Normal Preview Mode(Feature)",Int)=1.0
         [Toggle(_PREVIEW_MODE)]
@@ -50,7 +50,7 @@ Shader "DeltaField/shaders/temp"{
             #include "UnityCG.cginc"
             #include "Packages/com.deltafield.shader_commons/Includes/features_stereo_merge.hlsl"
 
-            #pragma shader_feature _ _DISABLE_CUSTOM_BILLBOARD
+            #pragma shader_feature _ _BILLBOARD_MODE
             #pragma shader_feature _ _NORMAL_PREVIEW
             #pragma shader_feature _ _PREVIEW_MODE
 
@@ -90,12 +90,12 @@ Shader "DeltaField/shaders/temp"{
                 UNITY_INITIALIZE_OUTPUT(v2f,o);
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
-                #ifdef _DISABLE_CUSTOM_BILLBOARD
-                    o.alpha = v.color.a;
-                    #include "Packages/com.deltafield.shader_commons/Includes/vertex_non_billboard.hlsl"
-                #else
+                #ifdef _BILLBOARD_MODE
                     o.alpha = 1.0;
                     #include "Packages/com.deltafield.shader_commons/Includes/vertex_billboard.hlsl"
+                #else
+                    o.alpha = v.color.a;
+                    #include "Packages/com.deltafield.shader_commons/Includes/vertex_non_billboard.hlsl"
                 #endif
 
                 o.normal = v.normal;
